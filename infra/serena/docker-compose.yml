@@ -10,6 +10,8 @@ services:
       - "24282:24282"
     volumes:
       - /volume1/personal_folder/Web Development/new_start:/workspaces/new_start:ro
+      - /volume1/personal_folder/ekosystem-wiki:/workspaces/ekosystem-wiki:ro
+      - /volume1/Obsidian:/workspaces/obsidian:ro
       - ./serena_config.yml:/workspaces/serena/config/serena_config.yml:ro
     command: >
       serena start-mcp-server

@@ -10,3 +10,15 @@ projects:
       - typescript
       - javascript
     description: "AudytOS / Ekoinstal main workspace — Vtiger modules, React apps, API endpoints"
+
+  ekosystem_wiki:
+    root: /workspaces/ekosystem-wiki
+    languages:
+      - markdown
+    description: "Ekosystem wiki — modules docs, product specs, Karpathy knowledge base, business processes"
+
+  obsidian:
+    root: /workspaces/obsidian
+    languages:
+      - markdown
+    description: "Obsidian vault — daily notes, project planning, HEMS research, architecture decisions"
