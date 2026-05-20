@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  serena:
+    image: ghcr.io/oraios/serena:latest
+    container_name: serena
+    restart: unless-stopped
+    ports:
+      - "9121:9121"
+      - "24282:24282"
+    volumes:
+      - /volume1/personal_folder/Web Development/new_start:/workspaces/new_start:ro
+      - ./serena_config.yml:/workspaces/serena/config/serena_config.yml:ro
+    command: >
+      serena start-mcp-server
+      --transport sse
+      --port 9121
+      --host 0.0.0.0
+      --context claude-code
+    environment:
+      - SERENA_DOCKER=1
+      - SERENA_DASHBOARD_PORT=24282
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:24282/dashboard"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

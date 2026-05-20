@@ -1,0 +1,12 @@
+gui_log_window: false
+web_dashboard_listen_address: "0.0.0.0"
+web_dashboard_open_on_launch: false
+
+projects:
+  new_start:
+    root: /workspaces/new_start
+    languages:
+      - php
+      - typescript
+      - javascript
+    description: "AudytOS / Ekoinstal main workspace — Vtiger modules, React apps, API endpoints"
